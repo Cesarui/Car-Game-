@@ -4,7 +4,6 @@ using UnityEngine.UIElements;
 
 public class CarMovement : MonoBehaviour
 {
-    [SerializeField] InputAction gas;
     [SerializeField] InputAction left;
     [SerializeField] InputAction right;
 
@@ -13,7 +12,6 @@ public class CarMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        gas.Enable();
         left.Enable();
         right.Enable();
     }
@@ -23,13 +21,13 @@ public class CarMovement : MonoBehaviour
     {
 
     }
+    private void Update()
+    {
+        transform.Translate(Vector3.back * speed * Time.deltaTime);
+    }
 
     private void FixedUpdate()
     {
-        if (gas.IsPressed())
-        {
-            transform.Translate(Vector3.back * speed * Time.deltaTime);
-        }
         if (left.IsPressed())
         {
             transform.Rotate(Vector3.down * turningSpeed * Time.deltaTime);
