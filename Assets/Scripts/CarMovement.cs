@@ -12,6 +12,7 @@ public class CarMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        // Using this to disable it in the future if the player crashes.
         left.Enable();
         right.Enable();
     }
