@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8473252b36adce4eb73a79f2161b6ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.259
+      value: 0.126
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8473252b36adce4eb73a79f2161b6ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65,6 +65,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8473252b36adce4eb73a79f2161b6ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8265499936672623282}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8473252b36adce4eb73a79f2161b6ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2187873113173630696}
   m_SourcePrefab: {fileID: 100100000, guid: b8473252b36adce4eb73a79f2161b6ac, type: 3}
 --- !u!1 &93137400945745526 stripped
 GameObject:
@@ -83,23 +86,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1eea08172d2804fb89c610f03c0f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gas:
-    m_Name: Gas
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a0267584-9518-4bf7-ab11-b650d08b9b2f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: bd1079d6-9742-41ea-9716-626378ef62b2
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Gas
-      m_Flags: 0
-    m_Flags: 0
   left:
     m_Name: Left
     m_Type: 0
@@ -134,8 +120,8 @@ MonoBehaviour:
       m_Action: Right
       m_Flags: 0
     m_Flags: 0
-  speed: 5
-  turningSpeed: 150
+  speed: 3.5
+  turningSpeed: 120
 --- !u!54 &929795766304423322
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,7 +130,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93137400945745526}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -182,5 +168,17 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.525, y: 0.43, z: 0.875}
-  m_Center: {x: 0, y: 0.23, z: 0}
+  m_Size: {x: 0.46, y: 0.5, z: 0.875}
+  m_Center: {x: 0, y: 0.26, z: 0}
+--- !u!114 &2187873113173630696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93137400945745526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6d0bba89b6ca94eb176103c04a6648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
